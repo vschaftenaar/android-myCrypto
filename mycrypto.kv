@@ -1,0 +1,65 @@
+<Root>:
+    portfolio: portfolio
+    price_watch: price_watch
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: portfolio
+            text:root.portfolio_init            
+            font_name: 'courier'
+            font_size: 100
+            size_hint:(1.0, 1.0)
+            text_size: self.size            
+            halign:"left"
+            valign:"middle"
+            padding: 25,50,0,25
+            size_hint: (1, None)
+            markup: True
+            size: self.texture_size
+            background_color: (44/255,63/255,102/255,.9)
+            canvas.before:
+                Color: 
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            id: price_watch
+            text: root.price_watch_init
+            size_hint:(1.0, 1.0)
+            font_size: 50           
+            font_name: 'courier'
+            text_size: self.size           
+            halign: "left"
+            valign:"top"
+            padding: 25,50,0,0
+            background_color: (44/255,63/255,102/255,1)
+            canvas.before:
+                Color: 
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            id: footer
+            text: 'abulily inc'
+            padding: 0,10,25,10
+            font_size: 30
+            size_hint: (1, None)
+            text_size: self.size            
+            font_name: 'courier'            
+            halign: "right"
+            valign:"middle"
+            markup: True
+            size: self.texture_size
+            background_color: (75/255,98/255,133/255,1)
+            canvas.before:
+                Color: 
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
+
